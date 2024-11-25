@@ -244,6 +244,7 @@
     text-transform: capitalize;
     background: linear-gradient(179.97deg, rgba(255, 255, 255, 0.38), #ffffff);
     z-index: 5;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -373,6 +374,7 @@
     white-space: nowrap;
     background: linear-gradient(179.97deg, #ffffff, rgba(255, 255, 255, 0.38));
     z-index: 12;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -459,6 +461,7 @@
     white-space: nowrap;
     background: linear-gradient(179.97deg, #ffffff, rgba(255, 255, 255, 0.38));
     z-index: 375;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -529,6 +532,7 @@
     white-space: nowrap;
     background: linear-gradient(179.97deg, #ffffff, rgba(255, 255, 255, 0.38));
     z-index: 380;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -647,6 +651,7 @@
     white-space: nowrap;
     background: linear-gradient(179.97deg, #ffffff, rgba(255, 255, 255, 0.38));
     z-index: 388;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -705,6 +710,7 @@
     white-space: nowrap;
     background: linear-gradient(179.97deg, #ffffff, rgba(255, 255, 255, 0.38));
     z-index: 394;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -844,6 +850,7 @@
     white-space: nowrap;
     background: linear-gradient(179.97deg, #ffffff, rgba(255, 255, 255, 0.38));
     z-index: 404;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -902,6 +909,7 @@
     white-space: nowrap;
     background: linear-gradient(179.97deg, #ffffff, rgba(255, 255, 255, 0.38));
     z-index: 410;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -1061,6 +1069,7 @@
     white-space: nowrap;
     background: linear-gradient(179.97deg, #ffffff, rgba(255, 255, 255, 0.38));
     z-index: 425;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -1530,6 +1539,7 @@
     white-space: nowrap;
     background: linear-gradient(179.97deg, #ffffff, rgba(255, 255, 255, 0.38));
     z-index: 457;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -1825,6 +1835,7 @@
     white-space: nowrap;
     background: linear-gradient(179.97deg, #ffffff, rgba(255, 255, 255, 0.38));
     z-index: 477;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
