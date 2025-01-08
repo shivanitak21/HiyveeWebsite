@@ -9,6 +9,50 @@ export default function Main() {
         setMenuOpen((prevState) => !prevState);
     };
 
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await fetch("http://localhost:5000/api/send-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                alert("Message sent successfully!");
+                setFormData({
+                    name: '',
+                    email: '',
+                    subject: '',
+                    message: '',
+                });
+            } else {
+                alert("Failed to send message. Please try again later.");
+            }
+        } catch (error) {
+            console.error("Error sending message:", error);
+            alert("An error occurred. Please try again later.");
+        }
+    };
+
+
     return (
         <div className='main-container'>
             <div className='navbar-container'>
@@ -272,23 +316,56 @@ export default function Main() {
                         experience.
                     </span>
                 </div>
-                <div className='frame-18e'>
-                    <div className='card-18f'>
-                        <div className='content-190'>
-                            <span className='number-of-songs-191'>Name</span>
-                        </div>
-                    </div>
-                    <div className='card-192'>
-                        <div className='content-193'>
-                            <span className='number-of-songs-194'>Email</span>
-                        </div>
-                    </div>
-                    <div className='card-195'>
-                        <div className='content-196'>
-                            <span className='number-of-songs-197'>Message</span>
-                        </div>
+                <div className="team-18a">
+            <div className="content-18b">
+                <span className="h-heading-18c">Contact us</span>
+                <span className="p-paragraph-18d">
+                    We value the words of our customers and try to enhance the product experience.
+                </span>
+            </div>
+            <form onSubmit={handleSubmit} className="frame-18e">
+                <div className="card-18f">
+                    <div className="content-190">
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                        />
                     </div>
                 </div>
+                <div className="card-192">
+                    <div className="content-193">
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                </div>
+                <div className="card-195">
+                    <div className="content-196">
+                        <textarea
+                            name="message"
+                            placeholder="Message"
+                            value={formData.message}
+                            onChange={handleChange}
+                            required
+                        ></textarea>
+                    </div>
+                </div>
+                <div className="primary-button-198">
+                    <button type="submit" className="download-now-199">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
                 <div className='primary-button-198'>
                     <span className='download-now-199'>Submit</span>
                 </div>
